@@ -6,6 +6,7 @@ const NETWORK_ID = "testnet"
 const NODE_URL = "https://rpc.testnet.near.org"
 
 const TOKEN_CONTRACT = "ref.fakes.testnet"
+const TRANSFER_RECEIVER = "apijstest.testnet"
 const TRANSFER_CALL_RECEIVER = "ref-finance-101.testnet";
 
 (async () => {
@@ -31,7 +32,7 @@ const TRANSFER_CALL_RECEIVER = "ref-finance-101.testnet";
   // 2. NEP141 ft_transfer
   const transferResult = await ft_transfer(account, {
     contract_id: TOKEN_CONTRACT,
-    receiver: "apijstest.testnet",
+    receiver: TRANSFER_RECEIVER,
     amount: String(10 ** 18),
   })
   // console.log(transferResult, 'transferResult')
